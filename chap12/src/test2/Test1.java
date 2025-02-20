@@ -16,6 +16,5 @@ set2:[64, 12, 9, 5, 4, 3, 2, 1]
 
 public class Test1 {
 	public static void main(String[] args) {
-
 	}
 }

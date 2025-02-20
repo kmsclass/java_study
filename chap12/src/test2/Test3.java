@@ -1,4 +1,10 @@
 package test2;
+
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Map;
+import java.util.Scanner;
+
 /*
  * MapEx2의 예제를 이용하기
  *
@@ -19,7 +25,7 @@ package test2;
 1.추가 2.삭제 3.조회 4.검색 0.종료
 4
 도서를 검색합니다.
-조회 기준을 입력하세요 (1.제목 2.저자 3.가격)
+검색 기준을 입력하세요 (1.제목 2.저자 3.가격)
 1 
 제목을 입력하세요
 홍길동전
@@ -27,6 +33,5 @@ package test2;
  */
 public class Test3 {
 	public static void main(String[] args) {
-
 	}
 }
