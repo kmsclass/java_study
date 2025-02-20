@@ -60,9 +60,9 @@ public class Test2_A {
 		System.out.println(list);
 		System.out.print("중간값 :");
 		int m = list.size()/2;
-		if(list.size() %2==1)
+		if(list.size() %2==1) //list의 요소의 갯수가 홀수인 경우
 			System.out.println(list.get(m));
-		else {
+		else { //list의 요소의 갯수가 짝수인 경우
 			System.out.println((list.get(m-1) + list.get(m))/2.0);
 		}
 	}

@@ -27,11 +27,13 @@ import java.util.List;
 김삿갓:국어(95),영어(85),수학(75),총점(255),평균(85.00)
 홍길동:국어(90),영어(80),수학(70),총점(240),평균(80.00)
 임꺽정:국어(60),영어(75),수학(100),총점(235),평균(78.33)
+
 국어 점수내림차순 정렬
 김삿갓:국어(95),영어(85),수학(75),총점(255),평균(85.00)
 홍길동:국어(90),영어(80),수학(70),총점(240),평균(80.00)
 이몽룡:국어(80),영어(95),수학(95),총점(270),평균(90.00)
 임꺽정:국어(60),영어(75),수학(100),총점(235),평균(78.33)
+
 영어 점수내림차순 정렬
 이몽룡:국어(80),영어(95),수학(95),총점(270),평균(90.00)
 김삿갓:국어(95),영어(85),수학(75),총점(255),평균(85.00)
@@ -78,15 +80,13 @@ public class Test1_A {
 		list.add(new Student("임꺽정", 60, 75, 100));
 
 		System.out.println("기본정렬방식");
-		Collections.sort(list);
+		Collections.sort(list); // Student 클래스의 compareTo() 메서드에 구현된 내용대로 정렬됨
 		for(Student s : list) System.out.println(s);
 		System.out.println();
 		
 		System.out.println("총점기준 내림차순 정렬");
-//		Collections.sort(list,
-//				   (s1,s2)->s2.getTotal() - s1.getTotal());
-		Collections.sort(list,
-		   new Comparator<Student>() {
+//		Collections.sort(list,(s1,s2)->s2.getTotal() - s1.getTotal());
+		Collections.sort(list,  new Comparator<Student>() {
 			@Override
 			public int compare(Student s1, Student s2) {
 				return s2.getTotal() - s1.getTotal();
