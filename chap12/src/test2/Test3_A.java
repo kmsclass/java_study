@@ -20,7 +20,7 @@ import java.util.Scanner;
  * [결과]
 1.추가 2.삭제 3.조회 4.검색 0.종료
 3
-정렬 방식을 입력하세요 (1.제목 2.저장 3.가격)
+정렬 방식을 입력하세요 (1.제목 2.저자 3.가격)
 1
 (춘향전,미상,5000)
 (홍길동전,허균,10000)
@@ -28,7 +28,7 @@ import java.util.Scanner;
 1.추가 2.삭제 3.조회 4.검색 0.종료
 4
 도서를 검색합니다.
-검색 기준을 입력하세요 (1.제목 2.저장 3.가격)
+검색 기준을 입력하세요 (1.제목 2.저자 3.가격)
 1 
 제목을 입력하세요
 홍길동전
@@ -83,7 +83,7 @@ public class Test3_A {
 		int menu = scan.nextInt();
 		boolean check = true;
 		String title=null,author=null;
-		Integer price=0;
+		int price=0;
 		switch(menu) {
 		case 1 : System.out.println("제목을 입력하세요"); title = scan.next(); break;
 		case 2 : System.out.println("저자을 입력하세요"); author = scan.next(); break;
@@ -100,7 +100,7 @@ public class Test3_A {
 			case 3 : if (book.price == price) findlist.add(book);break;
 			}
 		}
-		if(findlist.isEmpty()) 
+		if(findlist.isEmpty())  //List 객체에 요소가 없는 경우  
 			System.out.println("검색하신 도서는 없습니다.");
 		else {
 			System.out.println("조회 도서정보:");
@@ -111,9 +111,10 @@ public class Test3_A {
 	private static void printBook() {
 		System.out.println("도서 목록을 조회합니다.");
 		System.out.println("정렬방식을 입력하세요 (1.제목 2.저자 3.가격)");
+		//books.values()
 		List<Book> list = new ArrayList<>(books.values());
 		Scanner scan = new Scanner(System.in);
-		int menu = scan.nextInt();
+		int menu = scan.nextInt(); //1,2,3 입력가능
 		boolean check = true;
 		switch (menu) {
 		case 1 :Collections.sort(list,(b1,b2)->b1.title.compareTo(b2.title));break; 
