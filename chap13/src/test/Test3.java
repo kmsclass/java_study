@@ -15,12 +15,8 @@ bbb.txt
 파일명을 입력하세요(종료:exit)
 exit
 */
-
 public class Test3 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
-
 }
