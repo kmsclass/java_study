@@ -26,7 +26,7 @@ public class Test1_A {
 					System.out.println(new String(buf, 0, len));
 				}
 			} catch (FileNotFoundException e) {
-				System.out.println("해당 파일 없음");
+				System.out.println(s+ ": 해당 파일 없음");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

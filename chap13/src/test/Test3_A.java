@@ -32,7 +32,7 @@ public class Test3_A {
 			if(filename.equals("exit")) break;
 			int lastdot = filename.lastIndexOf(".");
 			String bakfile=null;
-			if (lastdot  < 0) 
+			if (lastdot  < 0) //확장자가 없는 이름의 파일인 경우
 				 bakfile =filename + ".bak";
 			else bakfile =filename.substring(0,lastdot)+".bak";
 			
@@ -46,13 +46,12 @@ public class Test3_A {
 				while((len=fis.read(buf)) != -1) {
 					fos.write(buf,0,len);
 				}
-				System.out.println
-				   (filename +"=>" + bakfile + " 복사완료");
+				System.out.println(filename +"=>" + bakfile + " 복사완료");
 			} catch (FileNotFoundException e) { //원본파일이 없는 경우
-				System.out.println("복사할 파일이 없습니다.");
+				System.out.println(filename + ": 복사할 파일이 없습니다.");
 			} catch (Exception e) {
 				e.printStackTrace();
-			} finally {
+			} finally { //정상, 예외발생 모두 실행되는 영역
 				if(fos != null) fos.flush();
 				if(fis != null) fis.close();
 				if(fos != null) fos.close();
