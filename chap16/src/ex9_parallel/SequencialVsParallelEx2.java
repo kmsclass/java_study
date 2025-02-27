@@ -1,4 +1,4 @@
-package ex8_parallel;
+package ex9_parallel;
 
 import java.util.Arrays;
 import java.util.List;
